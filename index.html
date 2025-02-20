@@ -1,16 +1,22 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabesh Aryal - Portfolio</title>
+    <title>Prabesh Aryal | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Prabesh Aryal</h1>
+        <div class="container">
+            <h1>Prabesh Aryal</h1>
+            <h2>Computer Science Student & Data Science Enthusiast</h2>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -18,12 +24,45 @@
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Welcome to My Portfolio</h2>
-        <p>This is my personal portfolio website. I am a Computer Science student at Tennessee State University specializing in Data Science. With a strong foundation in Python, SQL, R, and data visualization tools, I have a passion for extracting meaningful insights from data and building impactful solutions. This website serves as my digital portfolio, highlighting my technical expertise, academic journey, and professional experiences.</p>
-        <a href="projects.html" class="btn">View Projects</a>
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/profile.jpg" alt="Prabesh Aryal" class="profile-photo">
+
+            <!-- Improved Text Layout -->
+            <div class="intro-text">
+                <p>Welcome to my portfolio!</p>
+                <p>I specialize in AI, software development, and data-driven solutions.</p>
+            </div>
+
+            <a href="projects.html" class="btn">View My Work</a>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Featured Skills Section -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-list">
+            <div class="skill">Python</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Web Development</div>
+            <div class="skill">Data Science</div>
+            <div class="skill">Cloud Computing</div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="topButton" onclick="scrollToTop()">↑ Top</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© <span id="year"></span> Prabesh Aryal. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/amprabesh1" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/prabesh-aryal1/" target="_blank">LinkedIn</a>
+            <a href="https://leetcode.com/u/amprabesh1/" target="_blank">LeetCode</a>
+        </div>
+    </footer>
 </body>
 </html>

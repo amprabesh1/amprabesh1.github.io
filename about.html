@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About | Prabesh Aryal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <nav>
             <ul>
@@ -15,30 +17,59 @@
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- About Section with Background Image -->
         <section class="about">
-            <h1>About Me</h1>
-            <p>I am a passionate and driven data science student with a strong background in computer science and a specialization in data analysis. With hands-on experience in programming, machine learning, and data visualization, I have worked on multiple projects involving predictive modeling and statistical analysis. My goal is to leverage data-driven insights to solve real-world problems efficiently.</p>
+            <div class="about-container">
+                <h1>About Me</h1>
+                <p class="about-text">
+                    I am a passionate and driven Computer Science student at Fisk University, specializing in
+                    <strong>Artificial Intelligence, Web Development, and Data Science.</strong>
+                    With hands-on experience in <strong>programming, machine learning, and UI/UX design</strong>,
+                    I have worked on multiple projects that solve real-world problems efficiently.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
             <h2>Education</h2>
-            <p>Currently pursuing a Bachelor’s degree in Computer Science with a focus on Data Science at Tennessee State University. I have completed extensive coursework in machine learning, database management, and statistical analysis.</p>
+            <p><strong>Fisk University</strong> - B.S. in Computer Science (2023 - 2027)</p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience">
             <h2>Work Experience</h2>
             <ul>
-                <li><strong>Data Science Intern</strong> - Office of Operations Tribeni Road Mark Pvt. Ltd (Dec 2021 - Jun 2022)</li>
-                <li><strong>Administrative Assistant</strong> - TSU Psychology Department (May 2023 - Aug 2023)</li>
-                <li><strong>Assistant</strong> - Office of Academic Affairs (Feb 2024 - May 2024)</li>
+                <li><strong>Web Developer Intern</strong> - Small Heaven Travels & Tour (May 2023 - Aug 2023)</li>
+                <li><strong>Teaching Assistant</strong> - Fisk University (Aug 2024 - Present)</li>
             </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
-                <li>Data Analysis & Visualization</li>
-                <li>Machine Learning & AI</li>
-                <li>Python, SQL, R, JavaScript</li>
-                <li>Data Wrangling & Cleaning</li>
-                <li>Cloud Computing & Databases</li>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Machine Learning & AI (Python, TensorFlow, scikit-learn)</li>
+                <li>Data Analysis & Visualization (Pandas, Matplotlib, SQL)</li>
+                <li>UI/UX Design & Front-End Development</li>
+                <li>Cloud Computing & API Integration</li>
             </ul>
         </section>
     </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <p>© <span id="year"></span> Prabesh Aryal. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Auto-update footer year
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
