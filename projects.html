@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Prashan Sapkota</title>
+    <title>Projects | Prabesh Aryal</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css"> <!-- New CSS for Project Box Styling -->
 </head>
 <body>
     <header>
@@ -22,26 +23,57 @@
         <section class="projects">
             <h1>My Projects</h1>
 
-            <div class="project">
+            <div class="project project-blue">
                 <h2>Basketball Scores Analysis (Data Science)</h2>
                 <p><strong>Tech Stack:</strong> Python, NumPy, Pandas, Matplotlib, SciPy</p>
-                <p>Analyzed synthetic game data and win/loss trends, visualized score distributions, and computed confidence intervals.</p>
+                <ul>
+                    <li>Generated synthetic game data, computed confidence intervals, and analyzed win/loss statistics to assess team performance.</li>
+                    <li>Visualized score distributions for two teams using histograms, providing insights into score patterns over simulated games.</li>
+                    <li>Evaluated point differentials, calculated winning likelihood with 95% confidence, quantifying outcome variation through statistical inference.</li>
+                </ul>
                 <a href="#">View Code</a>
             </div>
 
-            <div class="project">
-                <h2>Hangman Game Development (Software Engineering)</h2>
-                <p><strong>Tech Stack:</strong> Python, Jupyter Notebook</p>
-                <p>Developed a terminal-based word-guessing game with user input handling and state tracking.</p>
+            <div class="project project-green">
+                <h2>Linear Algebra and Data Visualization (Mathematics)</h2>
+                <p><strong>Tech Stack:</strong> Python, NumPy, Matplotlib</p>
+                <ul>
+                    <li>Plotted geometries, applied transformation matrices to visualize vector transformations and their effects on objects.</li>
+                    <li>Calculated and plotted eigenvectors, analyzed directional properties and relationships with transformed shapes.</li>
+                </ul>
                 <a href="#">GitHub</a>
             </div>
 
-            <div class="project">
-                <h2>Survey App (Web Development)</h2>
-                <p><strong>Tech Stack:</strong> Python, Kivy</p>
-                <p>Designed a survey app with CRUD functionality and a user-friendly interface for collecting responses.</p>
+            <div class="project project-yellow">
+                <h2>Hangman Game Development (Software Engineering)</h2>
+                <p><strong>Tech Stack:</strong> Python, Jupyter Notebook</p>
+                <ul>
+                    <li>Developed Hangman game using file I/O for word selection, and implemented loops, conditionals, and state management.</li>
+                    <li>Enabled user interaction with feedback, tracked game statistics like win rate, using data structures to analyze outcomes.</li>
+                </ul>
+                <a href="#">GitHub</a>
+            </div>
+
+            <div class="project project-red">
+                <h2>Data Analysis and Visualization (Business Intelligence)</h2>
+                <p><strong>Tech Stack:</strong> MS Excel, Power BI, Tableau, MS PowerPoint</p>
+                <ul>
+                    <li>Analyzed a dataset of 70,000+ merchants, applying data cleaning to optimize port entry/exit insights and uncover patterns.</li>
+                    <li>Created visualizations using Power BI and Tableau, customizing dashboards with advanced charting to enhance decision-making.</li>
+                </ul>
                 <a href="#">Project Demo</a>
             </div>
+
+            <div class="project project-purple">
+                <h2>Survey App (Web Development)</h2>
+                <p><strong>Tech Stack:</strong> Python, Kivy</p>
+                <ul>
+                    <li>Developed Kivy-based survey app incorporating CRUD operations for data handling, with backend for long-term retention.</li>
+                    <li>Designed questionnaires and user-friendly screens to capture tobacco usage, leveraging intuitive UI/UX for better interaction.</li>
+                </ul>
+                <a href="#">Project Demo</a>
+            </div>
+
         </section>
     </main>
 

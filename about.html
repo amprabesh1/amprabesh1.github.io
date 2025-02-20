@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Prabesh Aryal</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
 </head>
-<body>
-    <!-- Header Section -->
+<body class="about-page">
+
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- ✅ Header Section -->
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -19,48 +28,46 @@
     </header>
 
     <main>
-        <!-- About Section with Background Image -->
-        <section class="about">
-            <div class="about-container">
-                <h1>About Me</h1>
-                <p class="about-text">
-                    I am a passionate and driven Computer Science student at Fisk University, specializing in
-                    <strong>Artificial Intelligence, Web Development, and Data Science.</strong>
-                    With hands-on experience in <strong>programming, machine learning, and UI/UX design</strong>,
-                    I have worked on multiple projects that solve real-world problems efficiently.
-                </p>
-            </div>
+        <!-- ✅ About Section -->
+        <section class="about-container">
+            <h1>About Me</h1>
+            <p class="about-text">
+                I am <strong>Prabesh Aryal</strong>, a Computer Science major with a concentration in Data Science at <strong>Tennessee State University</strong>.
+                With hands-on experience in **programming, machine learning, and UI/UX design**, I have worked on multiple projects that solve
+                real-world problems efficiently. Some of my projects include:
+                <ul>
+
+                </ul>
+            </p>
         </section>
 
-        <!-- Education Section -->
-        <section class="education">
+        <!-- ✅ Education Section -->
+        <section class="section-box">
             <h2>Education</h2>
-            <p><strong>Fisk University</strong> - B.S. in Computer Science (2023 - 2027)</p>
+            <p><strong>Tennessee State University</strong> - B.S. in Computer Science (2022 - 2026)</p>
         </section>
 
-        <!-- Work Experience Section -->
-        <section class="experience">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Web Developer Intern</strong> - Small Heaven Travels & Tour (May 2023 - Aug 2023)</li>
-                <li><strong>Teaching Assistant</strong> - Fisk University (Aug 2024 - Present)</li>
-            </ul>
+        <!-- ✅ Skills Section -->
+        <section class="section-box">
+            <h2>Skills Summary</h2>
+            <p><strong>Languages:</strong> Python, C++, SQL, R, SAS</p>
+            <p><strong>Frameworks:</strong> Pandas, NumPy, Matplotlib, SciPy, Statsmodels</p>
+            <p><strong>Tools:</strong> Tableau, Power BI, Excel, SAS, Jupyter Notebook, VS Code</p>
+            <p><strong>Platforms:</strong> Google Colab, MySQL, AWS, Oracle</p>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2>Skills</h2>
+        <!-- ✅ Experience Section (Only Titles & Dates) -->
+        <section class="section-box">
+            <h2>Experience</h2>
             <ul>
-                <li>Web Development (HTML, CSS, JavaScript)</li>
-                <li>Machine Learning & AI (Python, TensorFlow, scikit-learn)</li>
-                <li>Data Analysis & Visualization (Pandas, Matplotlib, SQL)</li>
-                <li>UI/UX Design & Front-End Development</li>
-                <li>Cloud Computing & API Integration</li>
+                <li><strong>IT Student Assistant</strong> - Tennessee State University (Oct 2024 - Present)</li>
+                <li><strong>Assistant at Office of Academic Affairs</strong> - Tennessee State University (Nov 2023 - May 2024)</li>
+                <li><strong>Data Analytics Intern</strong> - Tribeni Road Mark Pvt. Ltd, Nepal (Dec 2021 - Jun 2022)</li>
             </ul>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- ✅ Footer -->
     <footer>
         <p>© <span id="year"></span> Prabesh Aryal. All rights reserved.</p>
     </footer>
@@ -71,5 +78,6 @@
             document.getElementById("year").textContent = new Date().getFullYear();
         });
     </script>
+
 </body>
 </html>

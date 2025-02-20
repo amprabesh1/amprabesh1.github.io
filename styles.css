@@ -5,7 +5,18 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
-    font-size: 18px; /* Increased for better readability */
+    font-size: 24px; /* Same as About Page */
+}
+
+/* Prevent Content from Overlapping Navbar */
+body {
+    padding-top: 80px; /* Pushes content down so it's visible */
+}
+
+/* Expand Content to Fit Larger Screens */
+main, .hero, .skills, .profile-container {
+    max-width: 90%; /* Increases overall screen width usage */
+    margin: 0 auto; /* Centers content */
 }
 
 /* Header Styling */
@@ -13,117 +24,119 @@ header {
     background: #333;
     color: white;
     padding: 30px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 36px; /* Increased font size */
-}
-
-header h2 {
-    margin: 5px 0;
-    font-size: 22px; /* Slightly larger */
-    font-weight: normal;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above everything */
 }
 
 /* Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 30px; /* Slightly more space between menu items */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
-}
-
-nav ul li a.active {
+    font-size: 24px; /* Same as About Page */
     font-weight: bold;
-    text-decoration: underline;
+    padding: 10px 20px; /* More spacing for bigger screens */
+    transition: 0.3s;
 }
 
-/* Hero Section */
+/* Active Page Highlight */
+nav ul li a.active {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero Section - Expanded for Full Screen */
 .hero {
     background: url('assets/background.jpg') no-repeat center center/cover;
-    padding: 80px 20px; /* Increased padding to balance white space */
+    padding: 100px 5%;
     color: white;
     text-align: center;
+    max-width: 100%; /* Expand hero section to fit full screen */
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 8px;
+/* Hero Content Adjustments */
+.hero h1 {
+    font-size: 50px; /* Bigger Welcome text */
 }
 
-/* Profile Photo Styling - Centered & Balanced */
+.hero h2 {
+    font-size: 36px; /* More prominent Name */
+}
+
+.hero h3 {
+    font-size: 28px; /* Clearer subtitle */
+}
+
+/* Profile Section - Centered */
 .profile-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center; /* Ensure proper centering */
+    margin-bottom: 40px;
+    max-width: 100%;
 }
 
-.profile-photo {
-    width: 140px; /* Slightly larger */
-    height: 140px;
+/* Center Profile Image & Button in Hero Section */
+.hero-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Slightly Increase Profile Image Size */
+.hero-profile .profile-photo {
+    width: 200px; /* Slightly larger */
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white; /* Clean border */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+/* Center Button Below Image */
+.hero-profile .btn {
+    font-size: 24px;
+    padding: 14px 28px; /* Bigger button */
 }
 
 /* Improve spacing for text under profile photo */
 .intro-text {
     text-align: center;
-    max-width: 600px;
+    max-width: 90%;
     margin: 20px auto;
-    line-height: 1.8;
-    font-size: 20px; /* Larger font size */
+    line-height: 2; /* Same as About Page */
+    font-size: 24px; /* Matched to About Page */
     font-weight: 500;
-}
-
-/* Section Styling */
-.education, .experience, .skills, .awards {
-    margin: 40px auto;
-    text-align: left;
-    max-width: 700px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    line-height: 1.8;
-    font-size: 18px;
 }
 
 /* Button Styling */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 14px 28px;
     background-color: #ffcc00;
     color: black;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 20px; /* Bigger button text */
+    font-size: 24px; /* Same as About Page */
     transition: 0.3s;
 }
 
@@ -134,11 +147,12 @@ ul {
 
 /* Skills Section */
 .skills {
-    padding: 50px 20px;
+    padding: 60px 5%;
+    max-width: 100%;
 }
 
 .skills h2 {
-    font-size: 26px; /* Bigger section titles */
+    font-size: 34px; /* Bigger section titles */
     margin-bottom: 20px;
 }
 
@@ -146,15 +160,16 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
+    max-width: 100%;
 }
 
 .skill {
     background: #333;
     color: white;
-    padding: 12px 18px;
+    padding: 14px 22px;
     border-radius: 5px;
-    font-size: 18px; /* Bigger skill labels */
+    font-size: 24px; /* Matched to About Page */
 }
 
 /* Back to Top Button */
@@ -170,18 +185,20 @@ ul {
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px; /* Matched to About Page */
 }
 
 /* Footer Styling */
 footer {
     background: #333;
     color: white;
-    padding: 30px 0;
-    margin-top: 40px; /* Increased padding to remove extra white space */
-    font-size: 20px;
+    padding: 40px 0;
+    margin-top: 50px;
+    font-size: 24px; /* Matched to About Page */
+    width: 100%;
 }
 
+/* Social Media Links */
 footer .social-links {
     margin-top: 10px;
 }
@@ -190,7 +207,7 @@ footer .social-links a {
     color: #ffcc00;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 22px; /* Bigger links */
+    font-size: 26px; /* Bigger links */
     font-weight: bold;
 }
 
