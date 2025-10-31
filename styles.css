@@ -1,0 +1,216 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 24px; /* Same as About Page */
+}
+
+/* Prevent Content from Overlapping Navbar */
+body {
+    padding-top: 80px; /* Pushes content down so it's visible */
+}
+
+/* Expand Content to Fit Larger Screens */
+main, .hero, .skills, .profile-container {
+    max-width: 90%; /* Increases overall screen width usage */
+    margin: 0 auto; /* Centers content */
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above everything */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 30px; /* Slightly more space between menu items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Same as About Page */
+    font-weight: bold;
+    padding: 10px 20px; /* More spacing for bigger screens */
+    transition: 0.3s;
+}
+
+/* Active Page Highlight */
+nav ul li a.active {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero Section - Expanded for Full Screen */
+.hero {
+    background: url('assets/background.jpg') no-repeat center center/cover;
+    padding: 100px 5%;
+    color: white;
+    text-align: center;
+    max-width: 100%; /* Expand hero section to fit full screen */
+}
+
+/* Hero Content Adjustments */
+.hero h1 {
+    font-size: 50px; /* Bigger Welcome text */
+}
+
+.hero h2 {
+    font-size: 36px; /* More prominent Name */
+}
+
+.hero h3 {
+    font-size: 28px; /* Clearer subtitle */
+}
+
+/* Profile Section - Centered */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensure proper centering */
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+
+/* Center Profile Image & Button in Hero Section */
+.hero-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Slightly Increase Profile Image Size */
+.hero-profile .profile-photo {
+    width: 200px; /* Slightly larger */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+/* Center Button Below Image */
+.hero-profile .btn {
+    font-size: 24px;
+    padding: 14px 28px; /* Bigger button */
+}
+
+/* Improve spacing for text under profile photo */
+.intro-text {
+    text-align: center;
+    max-width: 90%;
+    margin: 20px auto;
+    line-height: 2; /* Same as About Page */
+    font-size: 24px; /* Matched to About Page */
+    font-weight: 500;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px; /* Same as About Page */
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 5%;
+    max-width: 100%;
+}
+
+.skills h2 {
+    font-size: 34px; /* Bigger section titles */
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 100%;
+}
+
+.skill {
+    background: #333;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 5px;
+    font-size: 24px; /* Matched to About Page */
+}
+
+/* Back to Top Button */
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #ffcc00;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px; /* Matched to About Page */
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+    font-size: 24px; /* Matched to About Page */
+    width: 100%;
+}
+
+/* Social Media Links */
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #ffcc00;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 26px; /* Bigger links */
+    font-weight: bold;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}

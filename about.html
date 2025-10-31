@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Prabesh Aryal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Background Video Styling */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: brightness(0.6) contrast(1.1);
+        }
+
+        /* Darker overlay for better readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20, 30, 48, 0.75) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(25, 35, 52, 0.75) 100%);
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(30, 41, 59, 0.95);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(99, 179, 237, 0.3);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #93c5fd;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            color: #dbeafe;
+            background: rgba(99, 179, 237, 0.1);
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: rgba(59, 130, 246, 0.2);
+            color: #dbeafe;
+            border-bottom: 2px solid #60a5fa;
+        }
+
+        main {
+            max-width: 920px;
+            margin: 3rem auto;
+            background: rgba(30, 41, 59, 0.75);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(99, 179, 237, 0.2);
+        }
+
+        h1 {
+            color: #dbeafe;
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: #bfdbfe;
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .about-text {
+            color: #cbd5e1;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            font-weight: 400;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+
+        .about-text strong {
+            color: #e0e7ff;
+            font-weight: 600;
+        }
+
+        .intro-highlight {
+            display: inline-block;
+            padding: 0.15rem 0.4rem;
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.25) 0%, rgba(37, 99, 235, 0.2) 100%);
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95em;
+            color: #bfdbfe;
+        }
+
+        .section-box {
+            margin-top: 2.5rem;
+            padding: 1.8rem;
+            background: linear-gradient(135deg, rgba(51, 65, 85, 0.5) 0%, rgba(45, 55, 72, 0.6) 100%);
+            border-radius: 14px;
+            border-left: 4px solid #60a5fa;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-box:hover {
+            background: linear-gradient(135deg, rgba(51, 65, 85, 0.65) 0%, rgba(45, 55, 72, 0.75) 100%);
+            transform: translateX(8px);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .section-box p {
+            color: #cbd5e1;
+            line-height: 1.9;
+            margin: 0.6rem 0;
+            font-size: 1.05rem;
+        }
+
+        .section-box strong {
+            color: #e0e7ff;
+            font-weight: 600;
+        }
+
+        .section-box ul {
+            color: #cbd5e1;
+            line-height: 2;
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            list-style-type: none;
+        }
+
+        .section-box li {
+            margin: 1rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .section-box li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .skill-category {
+            display: inline-block;
+            margin-right: 0.5rem;
+            color: #93c5fd;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #94a3b8;
+            background: rgba(30, 41, 59, 0.95);
+            margin-top: 3rem;
+            border-top: 1px solid rgba(99, 179, 237, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 2rem 1rem;
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="about-page">
+
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="https://cdn.pixabay.com/video/2021/07/30/83838-582389258_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="about-container">
+            <h1>About Me</h1>
+            <p class="about-text">
+                I am <strong>Prabesh Aryal</strong>, a Computer Science major with a concentration in <span class="intro-highlight">Data Science</span> at <strong>Tennessee State University</strong>.
+                With comprehensive experience in <span class="intro-highlight">statistical analysis</span>, <span class="intro-highlight">machine learning</span>, and <span class="intro-highlight">data engineering</span>,
+                I specialize in transforming complex datasets into actionable insights. My expertise spans the full data pipeline—from ETL processes and database optimization to predictive modeling and interactive visualization.
+                I am passionate about leveraging data-driven solutions to solve real-world challenges and drive informed decision-making across diverse domains.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-box">
+            <h2>Education</h2>
+            <p><strong>Tennessee State University</strong> — Bachelor of Science in Computer Science</p>
+            <p style="color: #94a3b8; font-size: 1.05rem;">Concentration: Data Science | Expected Graduation: 2026</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section-box">
+            <h2>Technical Skills</h2>
+            <p><span class="skill-category">Languages:</span> Python, C++, SQL, R, SAS</p>
+            <p><span class="skill-category">Frameworks & Libraries:</span> Pandas, NumPy, Matplotlib, SciPy, Statsmodels, Scikit-learn</p>
+            <p><span class="skill-category">Data Tools:</span> Tableau, Power BI, Excel, SAS, Jupyter Notebook, VS Code</p>
+            <p><span class="skill-category">Platforms & Databases:</span> Google Colab, MySQL, PostgreSQL, AWS, Oracle</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section-box">
+            <h2>Professional Experience</h2>
+            <ul>
+                <li><strong>Software Engineering Intern</strong> — HBCU Heroes, Remote<br>
+                    <span style="color: #94a3b8; font-size: 1.05rem;">May 2025 – Aug. 2025</span>
+                </li>
+                <li><strong>IT Student Assistant</strong> — Tennessee State University<br>
+                    <span style="color: #94a3b8; font-size: 1.05rem;">Oct. 2024 – Present</span>
+                </li>
+                <li><strong>Assistant, Office of Academic Affairs</strong> — Tennessee State University<br>
+                    <span style="color: #94a3b8; font-size: 1.05rem;">Nov. 2023 – May 2024</span>
+                </li>
+                <li><strong>Data Analytics Intern</strong> — Tribeni Road Mark Pvt. Ltd, Nepal<br>
+                    <span style="color: #94a3b8; font-size: 1.05rem;">Dec. 2021 – Jun. 2022</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="year"></span> Prabesh Aryal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Auto-update footer year
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
